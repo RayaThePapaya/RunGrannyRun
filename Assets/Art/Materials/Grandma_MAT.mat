@@ -27,11 +27,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 9b1b72ceb5dfb944eaaf0ddf5f02944f, type: 3}
+        m_Texture: {fileID: 2800000, guid: e7823384669d5674485ef223e0921087, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 08ca4b4b45c537e4db1a0f3fdfe67cae, type: 3}
+        m_Texture: {fileID: 2800000, guid: 9ccbc301988609648868fded2bc94b5f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -51,7 +51,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 9b1b72ceb5dfb944eaaf0ddf5f02944f, type: 3}
+        m_Texture: {fileID: 2800000, guid: e7823384669d5674485ef223e0921087, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -108,8 +108,6 @@ Material:
     - _Parallax: 0.02
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ScreenSpaceReflections: 1
-    - _ScreenSpaceReflectionsContributeTransparent: 1
     - _Smoothness: 0.20952909
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -127,7 +125,7 @@ Material:
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &8338896741010839841
+--- !u!114 &3355393215845405190
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
