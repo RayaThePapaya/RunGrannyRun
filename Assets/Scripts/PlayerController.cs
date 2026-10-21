@@ -25,6 +25,14 @@ public class PlayerController : MonoBehaviour
     //Raycasts
     RaycastHit[] raycastHits = new RaycastHit[10];
 
+    //Syncing of physics objects
+    SyncPhysicsObjects[] syncPhysicsObjects;
+
+    void Awake()
+    {
+        syncPhysicsObjects = GetComponentsInChildren<SyncPhysicsObjects>();
+    }
+
     //start
     void Start()
     {
@@ -92,6 +100,12 @@ public class PlayerController : MonoBehaviour
         {
             rigidbody3D.AddForce(Vector3.up * 20, ForceMode.Impulse);
             isJumpButtonPressed = false;
+        }
+
+        //Update the joints rotation based on the animations
+        for(int i = 0; i < syncPhysicsObjects.Length; i++)
+        {
+            syncPhysicsObjects[i].UpdateJointFromAnimation();
         }
 
     }
