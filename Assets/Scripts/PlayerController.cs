@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     ConfigurableJoint mainJoint;
 
+    [SerializeField]
+    Animator animator;
+
     //Input
     Vector2 moveInputVector = Vector2.zero;
     bool isJumpButtonPressed = false;
@@ -76,6 +79,9 @@ public class PlayerController : MonoBehaviour
         rigidbody3D.AddForce(Vector3.down * 10);
 
         float inputMagnitude = moveInputVector.magnitude;
+        Vector3 localVelocifyVsForward = transform.forward * Vector3.Dot(transform.forward, rigidbody3D.linearVelocity);
+
+        float localForwardVelocity = localVelocifyVsForward.magnitude;
 
         if (inputMagnitude != 0)
         {
@@ -84,9 +90,6 @@ public class PlayerController : MonoBehaviour
             //Rotate target towards direction
             mainJoint.targetRotation = Quaternion.RotateTowards(mainJoint.targetRotation,desiredDirection,Time.fixedDeltaTime * 300);
 
-            Vector3 localVelocifyVsForward = transform.forward * Vector3.Dot(transform.forward, rigidbody3D.linearVelocity);
-
-            float localForwardVelocity = localVelocifyVsForward.magnitude;
 
             if(localForwardVelocity < maxSpeed)
             {
@@ -101,6 +104,8 @@ public class PlayerController : MonoBehaviour
             rigidbody3D.AddForce(Vector3.up * 20, ForceMode.Impulse);
             isJumpButtonPressed = false;
         }
+
+        animator.SetFloat("movementSpeed", localForwardVelocity * 0.4f);
 
         //Update the joints rotation based on the animations
         for(int i = 0; i < syncPhysicsObjects.Length; i++)
