@@ -3,6 +3,15 @@ using UnityEngine;
 using TMPro;
 public class ShoppingListManager : MonoBehaviour
 {
+    AudioManager audioManager; // Reference to the AudioManager to play sound effects
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>(); // Find the AudioManager in the scene using its tag
+
+    }
+
+
+
     [System.Serializable]
     public class ShoppingListItem
     {
@@ -36,6 +45,7 @@ public class ShoppingListManager : MonoBehaviour
         }
 
         Debug.Log("You don't need that item!");
+        audioManager.PlaySFX(audioManager.wrongItemSFX); // Play the wrong item sound effect
     }
 
     public bool IsShoppingComplete() // Method to check if all items have been collected
@@ -54,7 +64,7 @@ public class ShoppingListManager : MonoBehaviour
         if (shoppingListText == null)
             return;
 
-        shoppingListText.text = "YOUR SHOPPING LIST\n\n";
+        shoppingListText.text = "Gran's Shopping List\n\n";
 
         foreach (ShoppingListItem item in items)
         {
