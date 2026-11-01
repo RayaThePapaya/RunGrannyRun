@@ -2,12 +2,20 @@ using UnityEngine;
 
 public class ShoppingItem : MonoBehaviour
 {
-   [Header("Item Info")]
-   public string itemID = "doughnut";
-   public string displayName = "Doughnut";
+    [Header("Item Information")]
+    public string itemID = "donut";
+    public string displayName = "Donut";
 
-   public void Collect()
+    public void Collect()
     {
+        ShoppingListManager manager =
+            FindFirstObjectByType<ShoppingListManager>();
+
+        if (manager != null)
+        {
+            manager.CollectItem(itemID);
+        }
+
         Debug.Log(displayName + " collected!");
         Destroy(gameObject);
     }
