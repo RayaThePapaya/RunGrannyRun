@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip backgroundMusic;
     public AudioClip collectItemSFX;
     public AudioClip wrongItemSFX;
-    public AudioClip annoucementSFX;
+    public AudioClip announcementChimeSFX;
+    public AudioClip oneMinuteSFX;
+    public AudioClip thirtySecondsSFX;
+    public AudioClip fiveSecondSFX;
 
     private void Start()
     {
@@ -24,5 +28,15 @@ public class AudioManager : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
+    }
+
+    //play an announcement with a chime before it
+    public IEnumerator PlayAnnouncement(AudioClip voiceClip)
+    {
+    PlaySFX(announcementChimeSFX);
+
+    yield return new WaitForSeconds(1f);
+
+    PlaySFX(voiceClip);
     }
 }
