@@ -6523,8 +6523,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1739492513}
-        m_TargetAssemblyTypeName: mainMenu, Assembly-CSharp
+      - m_Target: {fileID: 1739492514}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
@@ -49087,6 +49087,7 @@ GameObject:
   - component: {fileID: 1739492511}
   - component: {fileID: 1739492510}
   - component: {fileID: 1739492513}
+  - component: {fileID: 1739492514}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -49196,6 +49197,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc47fc1ce57d5403bbaf6e60e9064f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::mainMenu
+--- !u!114 &1739492514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739492508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668c35d4a566d5b40b2e3ee2931ebc8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  endGamePanel: {fileID: 0}
+  resultText: {fileID: 0}
 --- !u!43 &1747090957
 Mesh:
   m_ObjectHideFlags: 0
