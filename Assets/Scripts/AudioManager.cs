@@ -17,6 +17,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip fiveSecondSFX;
     public AudioClip gameOverSFX;
     public AudioClip grannyUpset;
+    public AudioClip MichelleSFX;
+    public AudioClip BossSFX;
+    public AudioClip JackieSFX;
 
     private void Start()
     {
