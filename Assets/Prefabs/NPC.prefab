@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f188485d8d16e8043a21b3fa97ff9bbd, type: 3}
       propertyPath: m_Name
-      value: The Boss
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: f188485d8d16e8043a21b3fa97ff9bbd, type: 3}
       propertyPath: m_Controller
@@ -67,6 +67,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f188485d8d16e8043a21b3fa97ff9bbd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2464575913947502882}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f188485d8d16e8043a21b3fa97ff9bbd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2777143930939536793}
   m_SourcePrefab: {fileID: 100100000, guid: f188485d8d16e8043a21b3fa97ff9bbd, type: 3}
 --- !u!1 &4308087207702069221 stripped
 GameObject:
@@ -95,3 +98,22 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &2777143930939536793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4308087207702069221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feffe5982cdb0884eb3d4e838cdaf8de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  range: 5

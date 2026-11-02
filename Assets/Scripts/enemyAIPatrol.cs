@@ -36,7 +36,7 @@ public class enemyAIPatrol : MonoBehaviour
         {
             agent.SetDestination(destPoint);
         }
-        if(Vector3.Distance(transform.position, destPoint) < 10)
+        if(Vector3.Distance(transform.position, destPoint) < 5)
         {
             walkPointSet = false;
         }

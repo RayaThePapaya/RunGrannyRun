@@ -13,6 +13,7 @@ public class PatienceManager : MonoBehaviour
     public Image[] hearts = new Image[3]; // Array to hold the heart images representing Granny's patience
 
     private int currentPatience = 3;
+    public GameManager gameManager;
 
     void Start()
     {
@@ -29,7 +30,7 @@ public class PatienceManager : MonoBehaviour
 
         if (currentPatience <= 0)
         {
-            Debug.Log("GRANNY HAS HAD ENOUGH!");
+            gameManager.GameOver("GRANNY HAS HAD ENOUGH!");
         }
     }
 

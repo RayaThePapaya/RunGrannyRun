@@ -46,6 +46,12 @@ public class ShoppingListManager : MonoBehaviour
 
         Debug.Log("You don't need that item!");
         audioManager.PlaySFX(audioManager.wrongItemSFX); // Play the wrong item sound effect
+
+        PatienceManager patienceManager = FindFirstObjectByType<PatienceManager>();
+        
+        if (patienceManager != null){
+            patienceManager.LosePatience();
+        }
     }
 
     public bool IsShoppingComplete() // Method to check if all items have been collected

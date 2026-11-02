@@ -15,6 +15,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip oneMinuteSFX;
     public AudioClip thirtySecondsSFX;
     public AudioClip fiveSecondSFX;
+    public AudioClip gameOverSFX;
+    public AudioClip grannyUpset;
 
     private void Start()
     {
@@ -39,4 +41,23 @@ public class AudioManager : MonoBehaviour
 
     PlaySFX(voiceClip);
     }
+
+    //play a game over sequence witha game over sound, and granny upset voice
+    public IEnumerator PlayGameOverSequence()
+    {
+        // Stop existing music and sound effects
+        if (musicSource != null)
+            musicSource.Stop();
+
+        if (sfxSource != null)
+            sfxSource.Stop();
+
+        // Play both game-over sounds simultaneously
+        PlaySFX(gameOverSFX);
+        PlaySFX(grannyUpset);
+
+        yield return null;
+    }
+
+
 }
