@@ -20,6 +20,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip MichelleSFX;
     public AudioClip BossSFX;
     public AudioClip JackieSFX;
+    public AudioClip WinSFX;
+    public AudioClip grannyHappy;
 
     private void Start()
     {
@@ -58,6 +60,22 @@ public class AudioManager : MonoBehaviour
         // Play both game-over sounds simultaneously
         PlaySFX(gameOverSFX);
         PlaySFX(grannyUpset);
+
+        yield return null;
+    }
+
+    public IEnumerator PlayWinSequence()
+    {
+        // Stop existing music and sound effects
+        if (musicSource != null)
+            musicSource.Stop();
+
+        if (sfxSource != null)
+            sfxSource.Stop();
+
+        // Play both victory sounds simultaneously
+        PlaySFX(WinSFX);
+        PlaySFX(grannyHappy);
 
         yield return null;
     }
