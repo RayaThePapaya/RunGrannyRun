@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     // Flags to ensure sound effects are played only once
     private bool thirtySecondPlayed = false;
     private bool fiveSecondPlayed = false;
+    private bool timeUp = false;
 
     private void Awake()
     {
@@ -25,6 +26,10 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+        // Stop the timer once time has run out
+        if (timeUp)
+            return;
+
         remainingTime -= Time.deltaTime;
         remainingTime = Mathf.Max(remainingTime, 0f);
 
@@ -32,7 +37,7 @@ public class Timer : MonoBehaviour
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-        if (remainingTime <= 34f && !thirtySecondPlayed) // Check if 30 seconds have passed and the sound effect hasn't been played yet
+        if (remainingTime <= 34f && !thirtySecondPlayed)
         {
             thirtySecondPlayed = true;
             StartCoroutine(audioManager.PlayAnnouncement(audioManager.thirtySecondsSFX));
@@ -42,6 +47,19 @@ public class Timer : MonoBehaviour
         {
             fiveSecondPlayed = true;
             StartCoroutine(audioManager.PlayAnnouncement(audioManager.fiveSecondSFX));
+        }
+
+        // TIME'S UP!
+        if (remainingTime <= 0f)
+        {
+            timeUp = true;
+
+            GameManager gameManager = FindFirstObjectByType<GameManager>();
+
+            if (gameManager != null)
+            {
+                gameManager.GameOver("TIME'S UP! THE SHOP IS CLOSED!");
+            }
         }
     }
 }
