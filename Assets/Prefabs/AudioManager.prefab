@@ -57,6 +57,13 @@ MonoBehaviour:
   fiveSecondSFX: {fileID: 8300000, guid: e87f18a1d8de24144b815cfbec9cda60, type: 3}
   gameOverSFX: {fileID: 8300000, guid: 952aabbf0d69a5f449f527299e3e8aee, type: 3}
   grannyUpset: {fileID: 8300000, guid: e7e1114eb4ba133408d75f710d960c2d, type: 3}
+  MichelleSFX: {fileID: 0}
+  BossSFX: {fileID: 0}
+  JackieSFX: {fileID: 0}
+  WinSFX: {fileID: 0}
+  grannyHappy: {fileID: 0}
+  musicVolume: 0.664
+  sfxVolume: 0.7
 --- !u!1 &3058139544834705462
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,7 +109,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.368
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -231,7 +238,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.846
   m_Pitch: 1
   Loop: 0
   Mute: 0
