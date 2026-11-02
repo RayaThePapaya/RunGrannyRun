@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
         return;
         
         gameEnded = true;
+        Debug.Log("GAME OVER TRIGGERED");
 
         AudioManager audioManager =FindFirstObjectByType<AudioManager>();
 
@@ -51,5 +52,18 @@ public class GameManager : MonoBehaviour
         resultText.text = message;
         Time.timeScale = 0f;
         
+    }
+
+    public void GameWon()
+    {
+        if (gameEnded)
+            return;
+
+        gameEnded = true;
+
+        endGamePanel.SetActive(true);
+        resultText.text = "SHOPPING COMPLETE! YOU WIN!";
+
+        Time.timeScale = 0f;
     }
 }

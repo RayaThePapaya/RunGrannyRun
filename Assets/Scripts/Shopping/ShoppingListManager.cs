@@ -37,9 +37,22 @@ public class ShoppingListManager : MonoBehaviour
         {
             if (item.itemID == itemID && !item.collected)
             {
-                item.collected = true; // Mark the item as collected
-                UpdateShoppingListUI(); 
+                item.collected = true;
+                UpdateShoppingListUI();
+
                 Debug.Log(item.displayName + " added to your basket!");
+
+                // Check whether the entire shopping list is complete
+                if (IsShoppingComplete())
+                {
+                    GameManager gameManager = FindFirstObjectByType<GameManager>();
+
+                    if (gameManager != null)
+                    {
+                        gameManager.GameWon();
+                    }
+                }
+
                 return;
             }
         }
@@ -70,7 +83,7 @@ public class ShoppingListManager : MonoBehaviour
         if (shoppingListText == null)
             return;
 
-        shoppingListText.text = "Gran's Shopping List\n\n";
+        shoppingListText.text = "Shopping List\n";
 
         foreach (ShoppingListItem item in items)
         {
