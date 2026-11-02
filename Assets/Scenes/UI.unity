@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 459424658}
   - component: {fileID: 459424660}
   - component: {fileID: 459424659}
+  - component: {fileID: 459424661}
   m_Layer: 5
   m_Name: Game Name
   m_TagString: Untagged
@@ -328,6 +329,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459424657}
   m_CullTransparentMesh: 1
+--- !u!114 &459424661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459424657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Outline
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 100, y: 100}
+  m_UseGraphicAlpha: 1
 --- !u!1 &582939124
 GameObject:
   m_ObjectHideFlags: 0
@@ -492,6 +508,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   endGamePanel: {fileID: 0}
   resultText: {fileID: 0}
+  winBackground: {fileID: 0}
+  loseBackground: {fileID: 0}
 --- !u!4 &877717953
 Transform:
   m_ObjectHideFlags: 0
