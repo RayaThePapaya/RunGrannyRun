@@ -23,18 +23,33 @@ public class AudioManager : MonoBehaviour
     public AudioClip WinSFX;
     public AudioClip grannyHappy;
 
+    [Header("-------- Volume Settings --------")]
+    [Range(0f, 1f)]
+    public float musicVolume = 0.2f;
+
+    [Range(0f, 1f)]
+    public float sfxVolume = 0.7f;
+
     private void Start()
     {
         if (musicSource != null && backgroundMusic != null)
         {
-        musicSource.clip = backgroundMusic;
-        musicSource.Play();
+            musicSource.clip = backgroundMusic;
+            musicSource.volume = musicVolume;
+            musicSource.Play();
+        }
+        if (sfxSource != null)
+        {
+            sfxSource.volume = sfxVolume;
         }
     }
 
     public void PlaySFX(AudioClip clip)
     {
-        sfxSource.PlayOneShot(clip);
+    if (sfxSource != null && clip != null)
+        {
+            sfxSource.PlayOneShot(clip);
+        }
     }
 
     //play an announcement with a chime before it

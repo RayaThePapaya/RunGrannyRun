@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -48,6 +60,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -1677535536452366970, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -68,28 +84,28 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8088571199099378279, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 488505896134025594}
-    - targetCorrespondingSourceObject: {fileID: 7368532112780396474, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
+      addedObject: {fileID: 3060237860525517726}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3480210803301124098}
-    - targetCorrespondingSourceObject: {fileID: 3705718881833309908, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
+      addedObject: {fileID: 7506664892809881233}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6407736571861887840}
+      addedObject: {fileID: 6896359928832330642}
   m_SourcePrefab: {fileID: 100100000, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
---- !u!1 &112726629751026367 stripped
+--- !u!1 &9012113189667755401 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8088571199099378279, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
   m_PrefabInstance: {fileID: 8201086683896047832}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &488505896134025594
-MeshCollider:
+--- !u!65 &3060237860525517726
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 112726629751026367}
+  m_GameObject: {fileID: 9012113189667755401}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -101,61 +117,47 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8097161310165528132, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
---- !u!1 &1698512410855010146 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7368532112780396474, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
-  m_PrefabInstance: {fileID: 8201086683896047832}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &3480210803301124098
-MeshCollider:
+  serializedVersion: 3
+  m_Size: {x: 0.61, y: 1.01, z: 0.4}
+  m_Center: {x: 0.02, y: 0.17, z: 0.23}
+--- !u!54 &7506664892809881233
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698512410855010146}
-  m_Material: {fileID: 0}
+  m_GameObject: {fileID: 9012113189667755401}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8880973737853341553, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
---- !u!1 &4809078399730368012 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3705718881833309908, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
-  m_PrefabInstance: {fileID: 8201086683896047832}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &6407736571861887840
-MeshCollider:
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6896359928832330642
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4809078399730368012}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_GameObject: {fileID: 9012113189667755401}
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4390594745249864414, guid: 2ef39d95412574d71b9676e723721f55, type: 3}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0802a389a56fb4dbb88e032fedcdc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShoppingItem
+  itemID: avocado
+  displayName: Avocado
